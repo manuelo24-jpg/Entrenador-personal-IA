@@ -1,0 +1,68 @@
+exercise: squat
+display_name: Sentadillas
+description: Flexión de rodillas y cadera bajando de forma controlada con la espalda neutra.
+icon: "🦵"
+preferred_view: side
+is_isometric: false
+required_keypoints:
+  - shoulder
+  - hip
+  - knee
+  - ankle
+phase_metric: knee_angle
+hysteresis_degrees: 5.0
+confirm_frames: 2
+
+levels:
+  easy:
+    display_name: Fácil
+    up_threshold: 155.0
+    down_threshold: 110.0
+    trunk_lean_max_angle: 50.0
+    knee_over_toe_ratio: 0.35
+    min_phase_seconds: 0.0
+    symmetry_tolerance: 25.0
+    rules_enabled:
+      - trunk_lean
+      - full_rom
+  medium:
+    display_name: Medio
+    up_threshold: 162.0
+    down_threshold: 95.0
+    trunk_lean_max_angle: 40.0
+    knee_over_toe_ratio: 0.25
+    min_phase_seconds: 0.35
+    symmetry_tolerance: 16.0
+    rules_enabled:
+      - trunk_lean
+      - knee_tracking
+      - full_rom
+  advanced:
+    display_name: Avanzado
+    up_threshold: 168.0
+    down_threshold: 85.0
+    trunk_lean_max_angle: 32.0
+    knee_over_toe_ratio: 0.18
+    min_phase_seconds: 0.65
+    symmetry_tolerance: 10.0
+    rules_enabled:
+      - trunk_lean
+      - knee_tracking
+      - full_rom
+      - tempo
+      - symmetry
+
+penalties:
+  trunk_lean: 25.0
+  knee_tracking: 20.0
+  full_rom: 25.0
+  tempo: 15.0
+  symmetry: 15.0
+
+messages:
+  trunk_lean: "Mantén el pecho alto y evita inclinar demasiado el tronco"
+  knee_tracking: "Evita que las rodillas sobrepasen en exceso la punta del pie"
+  full_rom: "Baja más hasta alcanzar el paralelo con los muslos"
+  tempo: "Desciende de forma más controlada"
+  symmetry: "Reparte el peso por igual en ambas piernas"
+

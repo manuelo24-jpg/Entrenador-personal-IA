@@ -1,0 +1,77 @@
+exercise: pushup
+display_name: Flexiones
+description: Flexiones de brazos en suelo manteniendo alineación corporal hombro-cadera-tobillo.
+icon: "💪"
+preferred_view: side
+is_isometric: false
+required_keypoints:
+  - shoulder
+  - elbow
+  - wrist
+  - hip
+  - knee
+  - ankle
+phase_metric: elbow_angle
+hysteresis_degrees: 5.0
+confirm_frames: 2
+
+levels:
+  easy:
+    display_name: Fácil
+    up_threshold: 150.0
+    down_threshold: 105.0
+    body_line_tolerance: 25.0
+    hip_sag_ratio: 0.30
+    knee_min_angle: 145.0
+    min_phase_seconds: 0.0
+    symmetry_tolerance: 25.0
+    rules_enabled:
+      - body_line
+      - full_rom
+  medium:
+    display_name: Medio
+    up_threshold: 160.0
+    down_threshold: 90.0
+    body_line_tolerance: 15.0
+    hip_sag_ratio: 0.20
+    knee_min_angle: 155.0
+    min_phase_seconds: 0.3
+    symmetry_tolerance: 18.0
+    rules_enabled:
+      - body_line
+      - hip_position
+      - knees_straight
+      - full_rom
+  advanced:
+    display_name: Avanzado
+    up_threshold: 165.0
+    down_threshold: 80.0
+    body_line_tolerance: 10.0
+    hip_sag_ratio: 0.12
+    knee_min_angle: 165.0
+    min_phase_seconds: 0.6
+    symmetry_tolerance: 12.0
+    rules_enabled:
+      - body_line
+      - hip_position
+      - knees_straight
+      - full_rom
+      - tempo
+      - symmetry
+
+penalties:
+  body_line: 25.0
+  hip_position: 20.0
+  knees_straight: 20.0
+  full_rom: 25.0
+  tempo: 15.0
+  symmetry: 15.0
+
+messages:
+  body_line: "Mantén el cuerpo en línea recta (hombro-cadera-tobillo)"
+  hip_position: "Evita hundir o elevar las caderas"
+  knees_straight: "Mantén las rodillas extendidas"
+  full_rom: "Baja más: acerca el pecho al suelo"
+  tempo: "Controla la bajada más despacio"
+  symmetry: "Mantén ambos brazos trabajando de forma simétrica"
+

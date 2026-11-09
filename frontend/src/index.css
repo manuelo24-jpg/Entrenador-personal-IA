@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blue-900: #0B2545;
+  --blue-700: #13408A;
+  --blue-500: #1E6FF2;
+  --blue-300: #6FA8FF;
+  --blue-100: #E6F0FF;
+  --cyan-400: #22D3EE;
+  --ok: #16A34A;
+  --warn: #F59E0B;
+  --bad: #DC2626;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+

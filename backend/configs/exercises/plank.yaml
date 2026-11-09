@@ -1,0 +1,62 @@
+exercise: plank
+display_name: Plancha
+description: Ejercicio isométrico manteniendo el cuerpo alineado sobre antebrazos y punteras.
+icon: "⏱️"
+preferred_view: side
+is_isometric: true
+required_keypoints:
+  - shoulder
+  - elbow
+  - hip
+  - knee
+  - ankle
+phase_metric: body_line_angle
+hysteresis_degrees: 3.0
+confirm_frames: 2
+
+levels:
+  easy:
+    display_name: Fácil
+    target_hold_seconds: 20.0
+    body_line_tolerance: 24.0
+    hip_sag_ratio: 0.28
+    knee_min_angle: 148.0
+    elbow_under_shoulder_ratio: 0.35
+    rules_enabled:
+      - body_line
+  medium:
+    display_name: Medio
+    target_hold_seconds: 40.0
+    body_line_tolerance: 15.0
+    hip_sag_ratio: 0.18
+    knee_min_angle: 158.0
+    elbow_under_shoulder_ratio: 0.25
+    rules_enabled:
+      - body_line
+      - hip_position
+      - knees_straight
+  advanced:
+    display_name: Avanzado
+    target_hold_seconds: 60.0
+    body_line_tolerance: 10.0
+    hip_sag_ratio: 0.12
+    knee_min_angle: 165.0
+    elbow_under_shoulder_ratio: 0.18
+    rules_enabled:
+      - body_line
+      - hip_position
+      - knees_straight
+      - elbow_alignment
+
+penalties:
+  body_line: 30.0
+  hip_position: 25.0
+  knees_straight: 20.0
+  elbow_alignment: 15.0
+
+messages:
+  body_line: "Alinea hombros, caderas y tobillos en línea recta"
+  hip_position: "Corrige la altura de la cadera (ni hundida ni en pico)"
+  knees_straight: "Extiende completamente las piernas"
+  elbow_alignment: "Coloca los codos justo debajo de los hombros"
+

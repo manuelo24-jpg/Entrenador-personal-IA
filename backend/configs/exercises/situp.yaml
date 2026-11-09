@@ -1,0 +1,65 @@
+exercise: situp
+display_name: Abdominales
+description: Elevación controlada del tronco activando el abdomen con rodillas flexionadas.
+icon: "🔥"
+preferred_view: side
+is_isometric: false
+required_keypoints:
+  - shoulder
+  - hip
+  - knee
+  - ankle
+phase_metric: hip_angle
+hysteresis_degrees: 5.0
+confirm_frames: 2
+
+levels:
+  easy:
+    display_name: Fácil
+    up_threshold: 125.0
+    down_threshold: 85.0
+    knee_target_angle: 90.0
+    knee_angle_tolerance: 35.0
+    neck_pull_min_ratio: 0.15
+    min_phase_seconds: 0.0
+    rules_enabled:
+      - knee_flexion
+      - full_rom
+  medium:
+    display_name: Medio
+    up_threshold: 130.0
+    down_threshold: 75.0
+    knee_target_angle: 90.0
+    knee_angle_tolerance: 25.0
+    neck_pull_min_ratio: 0.22
+    min_phase_seconds: 0.3
+    rules_enabled:
+      - knee_flexion
+      - neck_alignment
+      - full_rom
+  advanced:
+    display_name: Avanzado
+    up_threshold: 135.0
+    down_threshold: 65.0
+    knee_target_angle: 90.0
+    knee_angle_tolerance: 18.0
+    neck_pull_min_ratio: 0.28
+    min_phase_seconds: 0.55
+    rules_enabled:
+      - knee_flexion
+      - neck_alignment
+      - full_rom
+      - tempo
+
+penalties:
+  knee_flexion: 20.0
+  neck_alignment: 25.0
+  full_rom: 25.0
+  tempo: 15.0
+
+messages:
+  knee_flexion: "Mantén las rodillas flexionadas cerca de 90° con pies apoyados"
+  neck_alignment: "No tires del cuello con las manos; mantén la barbilla despejada"
+  full_rom: "Eleva más el tronco activando el abdomen"
+  tempo: "Evita el impulso brusco y controla la bajada"
+
